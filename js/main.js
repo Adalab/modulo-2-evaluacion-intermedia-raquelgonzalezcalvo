@@ -32,7 +32,7 @@ function handlerNumber () {
 }
 
 let counter = 0;
-function counter() {
+function handleCounter() {
   spaceAttempts.innerHTML= `${counter++}`;
 }
 
@@ -40,7 +40,7 @@ function counter() {
 function hadleClick(event) {
   event.preventDefault()
   handlerNumber()
-  counter()
+  handleCounter()
 }
 
 // eventos
