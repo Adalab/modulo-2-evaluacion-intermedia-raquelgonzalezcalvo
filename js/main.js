@@ -33,7 +33,7 @@ function handlerNumber () {
 
 let counter = 0;
 function counter() {
- 
+  spaceAttempts.innerHTML= `${counter++}`;
 }
 
 
