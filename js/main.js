@@ -5,6 +5,7 @@ const inputUser = document.querySelector('.js-usernumber');
 const button = document.querySelector ('.js-btn');
 const spaceClue = document.querySelector ('.js-clue');
 const spaceAttempts = document.querySelector ('.js-attempts');
+let counter = 0;
 
 
 // funciones
@@ -31,7 +32,7 @@ function handlerNumber () {
   }   
 }
 
-let counter = 0;
+
 function handleCounter() {
   spaceAttempts.innerHTML= `${counter++}`;
 }
