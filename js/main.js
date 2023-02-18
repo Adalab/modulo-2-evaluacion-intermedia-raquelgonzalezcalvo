@@ -14,28 +14,33 @@ function getRandomNumber(max) {
  return Math.ceil(Math.random() * max);
 }
 
-const randomvalue= getRandomNumber (100)
+
+const randomvalue = getRandomNumber(100)
 console.log(randomvalue);
+
+function showMessage(message) {
+   spaceClue.innerHTML = message;
+
+}
 
 function handlerNumber () {
   const inputUserValue = parseInt(inputUser.value);
-  
 
   if (inputUserValue < 1 || inputUserValue > 100) { 
-    spaceClue.innerHTML = "El número debe de estar entre 1 y 100"
+    showMessage('El número debe de estar entre 1 y 100')
   } else if(inputUserValue > randomvalue) {
-    spaceClue.innerHTML = "Demasiado alto";
+    showMessage('Demasiado alto')
   } else if(inputUserValue < randomvalue) {
-    spaceClue.innerHTML = "Demasiado bajo";
-  } else if(inputUserValue = randomvalue); {
-    spaceClue.innerHTML = "Has ganado campeona";
-  }   
+    showMessage('Demasiado bajo')
+  } else if(inputUserValue = randomvalue) {
+    showMessage('Has ganado campeona')
+  }  
 }
 
 
-function handleCounter() {
+  function handleCounter() {
   spaceAttempts.innerHTML= `${counter++}`;
-}
+ }
 
 
 function hadleClick(event) {
