@@ -18,6 +18,7 @@ function getRandomNumber(max) {
 const randomvalue = getRandomNumber(100)
 console.log(randomvalue);
 
+//agrupar los mensajes 
 function showMessage(message) {
    spaceClue.innerHTML = message;
 
@@ -26,20 +27,22 @@ function showMessage(message) {
 function handlerNumber () {
   const inputUserValue = parseInt(inputUser.value);
 
-  if (inputUserValue < 1 || inputUserValue > 100) { 
+  if(isNaN(inputUserValue)) {
+    showMessage('Debe introducir un número')
+  } else if (inputUserValue < 1 || inputUserValue > 100) { 
     showMessage('El número debe de estar entre 1 y 100')
   } else if(inputUserValue > randomvalue) {
     showMessage('Demasiado alto')
   } else if(inputUserValue < randomvalue) {
     showMessage('Demasiado bajo')
-  } else if(inputUserValue = randomvalue) {
+  } else {
     showMessage('Has ganado campeona')
   }  
 }
 
 
   function handleCounter() {
-  spaceAttempts.innerHTML= `${counter++}`;
+    spaceAttempts.innerHTML= `Número de intentos ${counter++}`;
  }
 
 

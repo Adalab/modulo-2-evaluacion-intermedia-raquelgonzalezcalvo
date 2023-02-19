@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Adivinar el número</title>
 </head>
 <body>
-    <main>
-       <h1>Adivinar el número</h1>
+    <header>
+      <h1 class="title">Adivina el número</h1>
+    <header>
+    <main>  
       <form>
-        <label for="number">Introduce aquí tu número</label>
-        <input placeholder= "Ej: 9 " id="number" class="js-usernumber" type="number">
-        <button class="js-btn" >Prueba</button>
+        <label for="userNumber" class="label">Introduce aquí tu número:</label>
+        <div class="inputButton">
+        <input placeholder= "Ej: 9 " id="userNumber" class="input js-usernumber" type="text">
+        <button class="button js-btn">Prueba</button>
+        </div>
       </form>
-       <div>
-         <p class="js-clue">Pista:Escribe el número y dale a Prueba</p>
-         <p class="js-attempts">Número de intentos</p>
-       </div>
+      <p class="paragraph js-clue">Pista:Escribe el número y dale a Prueba</p>
+      <p class="paragraph js-attempts">Número de intentos: <span class="js_tries">0</span></p>
     </main>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
